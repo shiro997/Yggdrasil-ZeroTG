@@ -1,10 +1,11 @@
 (function(){
-	var app = angular.module.config("zeroTgWeb",['ngRoute',"$routeProvider"]);
-	var MainController = function($scope,$routeProvider){
-        $routeProvider
-            .when('/',{template:"C:/Users/altptt/Desktop/Git-ZeroTG/Yggdrasil-ZeroTG/index.html"})
-            .when('/YugiohDL',{template:"C:/Users/altptt/Desktop/Git-ZeroTG/Yggdrasil-ZeroTG/YugiohDL.html"})
-            .when('/Brawl',{template:""})
+	var app = angular.module('ZeroTgWeb');
+	app.controller('MainController', ['$scope','$stateProvider', function($scope,$stateProvider){
+        $stateProvider
+            .when('/',{template:'../Git-ZeroTG/Yggdrasil-ZeroTG/index.html'})
+            .when('/YugiohDL',{template:'../Git-ZeroTG/Yggdrasil-ZeroTG/YugiohDL.html'})
+            .when('/Brawl',{template:''})
             .otherwise({redirectTo:'/'});
-	}
+		
+	}])
 })();
